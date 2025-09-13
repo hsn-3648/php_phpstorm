@@ -1,0 +1,23 @@
+<?php
+
+//switch ve match arasındaki fark switchte break kullanımı varken matche de yok. Mach defautl bir değer istiyo. Vemrzsek hata veriyor.
+
+switch ($status) {
+    case 200:
+        $message = 'OK';
+        break;
+    case 404:
+        $message = 'Not Found';
+        break;
+    default:
+        $message = 'Unknown Status';
+        break;
+}
+
+// match (daha temiz)
+$status=200; //default bir değer vermek zorunluluğu var
+$message = match ($status) {
+    200 => 'OK',
+    404 => 'Not Found',
+    default => 'Unknown Status',
+};

@@ -1,0 +1,16 @@
+//Named Arguments (İsimli Argümanlar)
+
+//Fonksiyon veya metod çağırırken, parametreleri isimleriyle belirterek daha okunabilir ve esnek kod yazmak.
+//Sadece fonksiyon veya metod çağrılarında kullanılır
+function setConfig(string $host, int $port = 80, bool $useSSL = false) {
+    echo "Host: $host, Port: $port, SSL: " . ($useSSL ? 'Yes' : 'No');
+}
+
+// Sadece SSL’i değiştir:
+setConfig(host: "example.com", useSSL: true);
+
+function createUser(string $name, int $age, bool $isAdmin = false) {
+    echo "Name: $name, Age: $age, Admin: " . ($isAdmin ? 'Yes' : 'No');
+}
+//SIRASININDA KARIŞIKLIK OLSA BİLE AGE NAME OLARAK TANIMLANDIĞINDA DOLAYI HATA VERMEZ VE
+createUser(age: 25, name: "Ayşe", isAdmin: true);

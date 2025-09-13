@@ -1,0 +1,11 @@
+PhpStorm, Vagrant ile entegrasyon sunar.
+
+Vagrant → sanal makineyi (genelde VirtualBox üzerinde) kolayca ayağa kaldırmanı sağlayan bir araçtır.
+
+IDE’den çıkmadan:
+
+vagrant up, vagrant halt, vagrant reload gibi komutları çalıştırabilirsin.
+
+Provisioning, SSH bağlantısı ve folder mapping ayarlarını yönetebilirsin.
+
+Yani projen için ayrı bir VM geliştirme ortamı kullanıyorsan, PhpStorm bunu destekler.

@@ -1,0 +1,13 @@
+PhpStorm’daki Macros özelliği, IDE içinde yaptığın bir dizi işlemi kaydedip sonradan tek tuşla tekrar çalıştırmanı sağlar. 🔁
+
+Yani küçük bir otomasyon aracı gibi düşünebilirsin.
+
+📌 Ne işe yarar?
+
+    Sık tekrarladığın editör işlemlerini kaydedip otomatikleştirebilirsin.
+
+Örneğin:
+
+Satır sonuna ; ekle, sonra alta in, sonra echo yaz → bunların hepsini bir makro olarak kaydedebilirsin.
+
+Kod formatlama + belirli bir regex arama/replace işlemi

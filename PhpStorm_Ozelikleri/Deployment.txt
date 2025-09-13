@@ -1,0 +1,9 @@
+PhpStorm’da Deployment sekmesi ya da menüsü, projeni uzak bir sunucuya (server) senkronize etmeni sağlar. 🚀
+
+Ne işe yarar?
+
+Lokal geliştirdiğin kodları, doğrudan FTP, SFTP, FTPS, FTPS over SSH, hatta lokal klasör üzerinden başka bir ortama gönderebilirsin.
+
+PhpStorm, dosya yükleme (upload), indirme (download), otomatik senkronizasyon ve “on-the-fly edit” (dosyayı direkt sunucuda açıp düzenleme) özelliklerini destekler.
+
+Ayrıca Remote Interpreter ile doğrudan uzak sunucuda PHP kodlarını çalıştırabilirsin

@@ -1,0 +1,11 @@
+PhpStorm’daki Manage Project Templates (bazı sürümlerde Manage Project As Template diye de geçebiliyor) özelliği, daha önce Save Project as Template ile oluşturduğun şablonları yönetmene yarar.
+
+📌 Burada yapabileceklerin:
+
+Kaydettiğin şablonların listesini görmek
+
+İsimlerini değiştirmek
+
+Artık kullanmak istemediklerini silmek
+
+Yeni proje açarken görünecek seçenekleri düzenlemek

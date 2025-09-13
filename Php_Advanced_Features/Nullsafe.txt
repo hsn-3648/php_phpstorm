@@ -1,0 +1,8 @@
+
+
+//nullsafe(?->) nesneye erişimde null kontrolünü kolaylaştırır.
+//BÖYLE BİR DURUMDA user boş ise php hatası alanıyor.
+$city = $user->getAddress()->getCity();
+//bunu önlemek için nullsafe operatötü kullanılıyor.
+$city = $user?->getAddress()?->getCity(); //$user veya getAddress() null ise, zincirleme durur, $city null olur. HATA VERMEZ
+$street = $user?->address?->street;//ARA NESNELER NULL İSE HATA VERMEZ DEĞERİ NUL YAPAR

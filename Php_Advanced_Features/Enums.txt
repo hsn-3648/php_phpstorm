@@ -1,0 +1,105 @@
+//8.1 den önce kullanılan yapı  Aşağıdaki kullanımda $status = 'drfat' yazılı bir değer geldiğinde php uygulamadan çıkana kadar php bunu farketmiş.
+class Status {
+    const Draft = 'draft';
+    const Published = 'published';
+    const Archived = 'archived';
+}
+$status = Status::Draft;
+
+if ($status === Status::Draft) {
+    echo "Bu içerik taslak.";
+}
+//enums kullanımu:“Status” adında bir tipim var, bu sadece Draft, Published veya Archived olabilir. Başka hiçbir şey olamaz.
+//Aşağıdaki kullanımda $status = 'drfat' şeklinde bir değer geldiğinde php hemen hata veriri.
+//BU kullanım Hatalı string kullanımı engeller
+enum Status {
+    case Draft;
+    case Published;
+    case Archived;
+}
+$status = Status::Draft;
+
+if ($status === Status::Draft) {
+    echo "Bu içerik taslak.";
+}
+//Kullanıcı Rollerinde
+//Bu şekilde yanlışlıkla $role = "admin"; gibi string veremezsin.
+//Sadece UserRole::Admin, UserRole::Editor veya UserRole::Viewer olabilir.
+enum UserRole {
+    case Admin;
+    case Editor;
+    case Viewer;
+}
+
+function canEdit(UserRole $role): bool {
+    return $role === UserRole::Admin || $role === UserRole::Editor;
+}
+
+// Kullanım:
+$role = UserRole::Viewer;
+
+if (canEdit($role)) {
+    echo "Düzenleme yapabilir.";
+} else {
+    echo "Düzenleme yetkisi yok.";
+}
+//Api kullanımında
+enum Gender {
+    case Male;
+    case Female;
+    case Other;
+}
+
+function saveUser(string $name, Gender $gender): void {
+    echo "Kullanıcı: $name, Cinsiyet: {$gender->name}";
+}
+
+saveUser("Hasan", Gender::Male);
+// ✅ Çalışır
+
+saveUser("Ayşe", "kadın");
+//hata verir string kabul etmez
+
+//Backend Enums
+enum UserRole: string {
+    case Admin = 'admin';
+    case Editor = 'editor';
+    case Viewer = 'viewer';
+}
+
+function getRoleLabel(UserRole $role): string {
+    return match($role) {
+        UserRole::Admin => 'Yönetici',
+        UserRole::Editor => 'Editör',
+        UserRole::Viewer => 'Görüntüleyici',
+    };
+}
+
+// Kullanım:
+$role = UserRole::Admin;
+
+echo $role->value; // "admin"
+echo getRoleLabel($role); // "Yönetici"
+
+//Enm içinde metod yazma:
+//switch/match ifadelerini her yerde tekrar tekrar yazmazsın.
+
+enum OrderStatus: string {
+    case Pending = 'pending';
+    case Paid = 'paid';
+    case Shipped = 'shipped';
+    case Cancelled = 'cancelled';
+
+    public function label(): string {
+        return match($this) {
+            self::Pending   => 'Beklemede',
+            self::Paid      => 'Ödendi',
+            self::Shipped   => 'Kargoya verildi',
+            self::Cancelled => 'İptal edildi',
+        };
+    }
+}
+
+// Kullanım:
+$status = OrderStatus::Shipped;  //değeri shipped
+echo $status->label(); // "Kargoya verildi" label fonsinonu Shipped değerinş gönderiyor

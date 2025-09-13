@@ -1,0 +1,8 @@
+
+
+Bir kez hazırladığın klasör yapısını, ayarları, bağımlılıkları veya başlangıç kodlarını kaydedip,
+Sonraki projelerinde “New Project” ekranından doğrudan bu şablon üzerinden yeni bir proje oluşturabilirsin.
+Ne işine yarar?
+Her defasında aynı paketleri / kütüphaneleri kurmakla uğraşmazsın.
+Standart dizin yapını (src, public, config vs.) hep hazır gelir.
+Ekibin için bir “başlangıç noktası” oluşturabilirsin (örneğin Laravel + belirli konfigürasyonlar + kendi helper’ların)

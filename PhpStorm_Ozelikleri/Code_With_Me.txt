@@ -1,0 +1,9 @@
+//Başka bir geliştiriciyle aynı proje üzerinde gerçek zamanlı çalışmanı sağlar.
+
+//Sen davet linki gönderirsin, diğer kişi tarayıcıdan veya PhpStorm’dan katılır.
+
+//Katılan kişi senin editöründe kod yazabilir, dosya gezebilir, terminal kullanabilir, debug yapabilir (senin izin verdiğin ölçüde).
+
+//Sen de karşı tarafın imlecini görebilirsin (Google Docs’taki gibi).
+
+//Eş zamanlı sesli/görüntülü görüşme desteği de var (JetBrains üzerinden).

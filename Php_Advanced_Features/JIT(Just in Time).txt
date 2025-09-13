@@ -1,0 +1,35 @@
+//JIT (just in time) //performans artıırıcı kodun kritik kısımlarını daha makiine diline çevirere çalıştırma
+
+function calculatePrimeNumbers(int $limit): array {
+    $primes = [];
+    for ($i = 2; $i < $limit; $i++) {
+        $isPrime = true;
+        for ($j = 2; $j <= sqrt($i); $j++) {
+            if ($i % $j === 0) {
+                $isPrime = false;
+                break;
+            }
+        }
+        if ($isPrime) {
+            $primes[] = $i;
+        }
+    }
+    return $primes;
+}
+
+$start = microtime(true);
+$primes = calculatePrimeNumbers(50000);
+$end = microtime(true);
+
+echo "Toplam asal sayı: " . count($primes) . "\n";
+echo "Süre: " . ($end - $start) . " saniye\n";
+
+//php.ini dosyasında
+//jit kapalı
+//opcache.enable=1
+//opcache.jit=0
+
+//jit açık
+//opcache.enable=1
+//opcache.jit=1235
+//opcache.jit_buffer_size=100M

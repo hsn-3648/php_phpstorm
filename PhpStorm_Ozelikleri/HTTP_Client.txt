@@ -1,0 +1,15 @@
+Bu özellik IDE içinde Postman gibi HTTP isteği atmanı sağlar.
+
+Senaryo: GET, POST, PUT, DELETE gibi API isteklerini doğrudan PhpStorm’dan test edebilirsin.
+
+.http veya .rest dosyaları oluşturup içine istekleri yazabilirsin:
+
+GET https://api.example.com/users
+Authorization: Bearer {{token}}
+
+POSTMAN İŞLEMLERİ
+
+
+Sonra sağ tık → Run diyerek isteği gönderirsin.
+
+Gelen cevap JSON / XML ise güzelce formatlanmış şekilde görünür

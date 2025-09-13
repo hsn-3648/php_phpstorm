@@ -1,0 +1,33 @@
+*PhpStorm’daki Invalidate Caches / Restart… seçeneği, IDE’nin tuttuğu geçici dosyaları ve indexleri temizlemek için kullanılır.
+
+💡 PhpStorm (ve genel olarak JetBrains IDE’leri), projedeki dosyaları hızlı aramak, autocompletion (tamamlama) ve kod analizi yapabilmek için büyük bir cache ve index tutar. Bazen bu cache bozulabilir veya güncel olmayabilir → işte o zaman bu komut devreye girer.
+
+Ne yapar?
+
+    Invalidate Caches → IDE’nin tuttuğu index, cache, sembol tablosu, arama veritabanı gibi şeyleri sıfırlar.
+
+Restart → IDE’yi yeniden başlatır ve yeni baştan indexleme yapar.
+
+Ne zaman kullanılır?
+
+    Kod ekledin ama IDE görmüyor (ör. yeni class’ı bulamıyor).
+
+Autocompletion (tamamlama) veya renklendirme çalışmıyor.
+
+“Phantom” (olmayan) hatalar görünüyor.
+
+Dosya/dizin silindi veya taşındı ama IDE hala eski halini gösteriyor.
+
+Proje build/debug sırasında “garip” hatalar veriyor ama kod aslında doğru.
+
+Kullanımı
+
+Menüden: File → Invalidate Caches / Restart…
+
+Çıkan pencerede:
+
+Invalidate and Restart → cache’i temizler ve IDE’yi yeniden başlatır.
+
+Invalidate Only → sadece temizler, sen elle kapatıp açarsın.
+
+Just Restart → cache temizlemeden yeniden başlatır.

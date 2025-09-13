@@ -1,0 +1,20 @@
+CODE ALTINDA
+/*🔹 1. Generate (Alt+Insert / ⌘N)
+
+Kod içinde otomatik şablon üretme aracıdır.
+
+Örneğin bir sınıf (class) içindeyken:
+
+Constructor
+
+Getter / Setter
+
+toString()
+
+Equals & HashCode
+
+PHPDoc
+
+Test sınıfı
+
+Bunları elle yazmak yerine PhpStorm senin için hazır kod bloğu oluşturur.

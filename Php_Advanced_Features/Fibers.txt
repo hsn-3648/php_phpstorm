@@ -1,0 +1,24 @@
+//FIBERS 8.1
+//PHP DEEŞ ZAMANALI ÇALIŞMAYA YARIYORMUŞ:
+//BİR İŞLEMİ DURDURABİLİR. VE İŞLEM KALDIĞI YERDN DEVAM EDER
+
+$fiber = new Fiber(function (): void {
+    echo "Fiber başladı\n";
+    Fiber::suspend("Duraklama noktası");
+    echo "Fiber devam ediyor\n";
+});
+
+echo "Ana program başlıyor\n";
+
+$value = $fiber->start(); // Fiber çalışıyor, duraklama noktasına geliyor
+echo "Fiber durdu, değer: $value\n";
+
+$fiber->resume(); // Fiber kaldığı yerden devam ediyor
+
+echo "Ana program bitti\n";
+//ÇIKTI:
+//Ana program başlıyor
+//Fiber başladı
+//Fiber durdu, değer: Duraklama noktası
+//Fiber devam ediyor
+//Ana program bitti

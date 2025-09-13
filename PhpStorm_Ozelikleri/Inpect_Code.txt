@@ -1,0 +1,13 @@
+Projeni seçip statik analiz yaptırabilirsin.
+
+PhpStorm tüm kodu tarar ve şu konularda rapor çıkarır:
+
+Kullanılmayan değişkenler
+
+Erişilemeyen kod (dead code)
+
+Potansiyel bug’lar (ör. null olabilir, tip uyuşmazlığı)
+
+Code style ihlalleri
+
+Sonuçlar “Inspection Results” penceresinde listelenir

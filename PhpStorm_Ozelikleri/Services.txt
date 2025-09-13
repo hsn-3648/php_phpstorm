@@ -1,0 +1,15 @@
+TOOLS ALTINDA
+
+/*1. Services
+
+PhpStorm içindeki hizmetleri ve entegrasyonları tek panelde görmeyi sağlar.
+
+Burada görebileceklerin:
+
+Database bağlantıları (MySQL, PostgreSQL vs.)
+
+Application servers (Docker, Tomcat, PHP built-in server, Remote interpreter vs.)
+
+Background görevler (Deployment upload, Composer install, PHPUnit test, vb.)
+
+Yani “IDE’nin arka planda kullandığı tüm servisleri tek yerden yönetme” ekranıdır.

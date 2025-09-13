@@ -1,0 +1,21 @@
+//INTERFACE
+//TrafficLight enum’u HasColor interface’ini implemente ediyor.
+
+//Bu sayede her case için color() metodu zorunlu hale geliyor.
+interface HasColor {
+    public function color(): string;
+}
+/
+enum TrafficLight: string implements HasColor {
+    case Red = 'red';
+    case Yellow = 'yellow';
+    case Green = 'green';
+
+    public function color(): string {
+        return $this->value;
+    }
+}
+
+// Kullanım:
+$light = TrafficLight::Green;
+echo $light->color(); // "green"

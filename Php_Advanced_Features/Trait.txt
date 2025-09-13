@@ -1,0 +1,23 @@
+//TRAİT
+//Trait, enum içinde ortak kodu tekrar kullanmak için kullanılabilir.
+//LabelTrait sayesinde label metodu enum’un içine taşınmadan tekrar kullanılabilir.
+trait LabelTrait {
+    public function label(): string {
+        return match($this) {
+            self::Red    => 'Dur',
+            self::Yellow => 'Hazır ol',
+            self::Green  => 'Geç',
+        };
+    }
+}
+
+enum TrafficLight: string {
+    use LabelTrait;
+
+    case Red = 'red';
+    case Yellow = 'yellow';
+    case Green = 'green';
+}
+
+// Kullanım:
+echo TrafficLight::Yellow->label();
